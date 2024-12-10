@@ -6,7 +6,11 @@ public class Camera {   // 부모 클래스
 
     // 생성자 만들기 : Code -> Generate -> Constructor
     public Camera() {
-        this.name = "카메라";
+        this("카메라");
+    }
+
+    protected Camera(String name) {
+        this.name = name;
     }
 
     // 기능을 메소드로 구현
@@ -15,7 +19,7 @@ public class Camera {   // 부모 클래스
         System.out.println(this.name + " : 사진을 촬영합니다.");
     }
 
-    public void  recordVideo() {
+    public void recordVideo() {
         // 동영상 녹화
         System.out.println(this.name + " : 동영상을 녹화합니다.");
     }
